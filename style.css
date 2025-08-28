@@ -1,7 +1,10 @@
-/*Installed FONT*/
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
-/*Typography*/
+/*
+
+Typography
+
+*/
 
 .h1 {
   font-family: Rubik, sans-serif;
@@ -38,7 +41,25 @@
   line-height: 150%;
 }
 
-/*Colors*/
+.highlight {
+  font-family: Rubik, sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 150%;
+}
+
+.highlight-subtitle {
+  font-family: Rubik, sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 200%;
+}
+
+/*
+
+Colors
+
+*/
 
 .color-primary {
   color: #50ad9c;
@@ -72,28 +93,49 @@
   background-color: #eee;
 }
 
-/*Link styles*/
+/*
+
+Link styles
+
+*/
 
 a.active {
   color: #50ad9c;
   text-decoration: underline;
 }
 
-a:hover {
-  text-decoration: underline;
+a {
+
+  transition: transform 1s linear;
+  transform-origin: bottom 1px;
+
 }
 
-/*Header navigation styles*/
+a:hover {
+
+  transform: scale(1.5);
+
+
+}
+
+/*
+
+Header navigation styles
+
+*/
 
 .navigation {
-  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 32px;
 }
 
-.navigation-item:nth-child(n + 2) {
-  margin-left: 32px;
-}
+/*
 
-/*Logo styles*/
+Logo styles
+
+*/
 
 .logo {
   height: 64px;
@@ -101,48 +143,62 @@ a:hover {
   display: inline-block;
 }
 
-/*Header styles*/
+/*
+
+Header styles
+
+*/
 
 .header {
-  text-align: center;
-  margin-top: 80px;
-  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
-.header-navigation {
-  margin-top: 16px;
-}
+/*
 
+Footer styles
 
-/* Main styles*/
-
-.main {
-  margin-top: 80px;
-  margin-bottom: 80px;
-}
-
-/* Footer styles */
+*/
 
 .footer {
   text-align: center;
-  margin-top: 80px;
-  margin-bottom: 80px;
 }
 
+/*
 
+Main styles
 
-/*Feature styles*/
+*/
+
+.main {
+  display: flex;
+  flex-flow: column;
+  gap: 80px;
+}
+
+/*
+
+Feature styles
+
+*/
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
 .feature-metadata {
-  margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
 }
 
-.feature-title {
-  margin-top: 16px;
-}
-
-.feature-metadata-item {
-  margin: 0 8px;
+.feature-metadata-item:nth-child(n + 2)::before {
+  content: "-";
+  margin-right: 8px;
 }
 
 a.feature-metadata-item {
@@ -156,9 +212,149 @@ a.feature-metadata-item {
   object-fit: cover;
 }
 
-/*Wrapper style*/
+img {
+  transition: transform 0.5s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+
+/*
+
+Wrapper style
+
+*/
 
 .wrapper {
   max-width: 1120px;
-  margin: 0 auto;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/*
+
+Article styles
+
+*/
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.article {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.article-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/*
+
+Newsletter styles
+
+*/
+
+.newsletter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 128px;
+  padding: 40px 192px 40px 96px;
+  background-color: #f6f6f6;
+}
+
+.newsletter-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14.55px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 352px;
+
+}
+
+.newsletter .newsletter-form {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 352px;
+}
+
+/*
+.newsletter-form-input {
+  font-family: Rubik, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+  background-color: #E6E6E6;
+  padding: 10px;
+}
+
+.newsletter-form-button {
+  font-family: Rubik, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+  border-color: #50AD9C;
+  
+  }*/
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  height: 48px;
+  padding: 8px 16px;
+  background-color: #e6e6e6;
+  color: #808080;
+  font-family: Rubik, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  transition: 0.1s ease-in-out;
+}
+
+button {
+
+  width: 100%;
+  height: 48px;
+  padding: 8px 16px;
+  color: #50ad9c;
+  background-color: transparent;
+  border: 2px solid #50ad9c;
+  font-family: Rubik, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  transition: 0.3s ease-in;
+
+}
+
+button:hover {
+  transform: translateY(-1px);
+  background-color: #1a1a1a;
+}
+
+
+
+input:focus {
+  border: 2px solid;
+  border-color: #50ad9c;
+  background-color: white;
+  transform: translateY(-1px);
 }
